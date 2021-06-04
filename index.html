@@ -29,7 +29,8 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-  <button id="btnMsg" onclick="sendMsg()">ส่งเลข 00</button>
+  <button id="00" onclick="sendMsg00()">ส่งเลข 00</button>
+  <button id="01" onclick="sendMsg01()">ส่งเลข 01</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
@@ -65,13 +66,25 @@
     async function getFriendship() {
     }
 
-    async function sendMsg() {
+    async function sendMsg00() {
       if (liff.getContext().type !== "none") {
         await liff.sendMessages([
           {
             "type": "text",
-            "text": "เลขที่คุณส่งคือ 00"
-          }
+            "text": "ทายเลขหวย = 00"
+          },
+        ])
+        alert("Message Sent")
+      }
+    }
+
+    async function sendMsg01() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 00"
+          },
         ])
         alert("Message Sent")
       }
