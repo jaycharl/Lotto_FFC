@@ -7,10 +7,23 @@
   <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  กดปุ่มตัวเลข เพื่อส่งทายเลขหวย
+  <p>กดปุ่มตัวเลข เพื่อส่งทายเลขหวย </p>
 
-  <button id="00" onclick="sendMsg00()">ส่งเลข 00</button>
-  <button id="01" onclick="sendMsg01()">ส่งเลข 01</button>
+  <p>
+    <button id="00" onclick="sendMsg00()">00</button>
+  <button id="01" onclick="sendMsg01()">01</button>
+  <button id="02" onclick="sendMsg02()">02</button>
+  <button id="03" onclick="sendMsg03()">03</button>
+  <button id="04" onclick="sendMsg04()">04</button>
+  </p>>
+  <p>
+  <button id="05" onclick="sendMsg05()">05</button>
+  <button id="06" onclick="sendMsg06()">06</button>
+  <button id="07" onclick="sendMsg07()">07</button>
+  <button id="08" onclick="sendMsg08()">08</button>
+  <button id="09" onclick="sendMsg09()">09</button>
+  </p>>
+ 
   
 
   <!-- <script src="js/vconsole.min.js"></script> -->
@@ -30,7 +43,7 @@
             "text": "ทายเลขหวย = 00"
           },
         ])
-        alert("Message Sent")
+        alert("ส่งเลข 00 เรียบร้อยแล้ว")
       }
     }
 
@@ -42,24 +55,100 @@
             "text": "ทายเลขหวย = 01"
           },
         ])
-        alert("Message Sent")
+        alert("ส่งเลข 01 เรียบร้อยแล้ว")
       }
     }
 
-    function getContext() {
-      document.getElementById("type").append(liff.getContext().type)
-      document.getElementById("viewType").append(liff.getContext().viewType)
-      document.getElementById("utouId").append(liff.getContext().utouId)
-      document.getElementById("roomId").append(liff.getContext().roomId)
-      document.getElementById("groupId").append(liff.getContext().groupId)
+    async function sendMsg02() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 02"
+          },
+        ])
+        alert("ส่งเลข 02 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg03() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 03"
+          },
+        ])
+        alert("ส่งเลข 03 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg04() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 04"
+          },
+        ])
+        alert("ส่งเลข 04 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg05() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 05"
+          },
+        ])
+        alert("ส่งเลข 05 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg06() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 06"
+          },
+        ])
+        alert("ส่งเลข 06 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg07() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 07"
+          },
+        ])
+        alert("ส่งเลข 07 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg08() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 08"
+          },
+        ])
+        alert("ส่งเลข 08 เรียบร้อยแล้ว")
+      }
+    }
+    async function sendMsg09() {
+      if (liff.getContext().type !== "none") {
+        await liff.sendMessages([
+          {
+            "type": "text",
+            "text": "ทายเลขหวย = 09"
+          },
+        ])
+        alert("ส่งเลข 09 เรียบร้อยแล้ว")
+      }
     }
 
-    async function getUserProfile() {
-    }
-
-    function getEnvironment() {    
-    }
-
+  
     async function main() {
       await liff.init({ liffId: "1656066352-273eNbOR" })
       // getEnvironment()
