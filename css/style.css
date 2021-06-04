@@ -1,8 +1,14 @@
 button {
-  display: block;
-  width: 100%;
-  padding: 8px 0;
-  margin: 8px auto
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
 }
 
 p {
